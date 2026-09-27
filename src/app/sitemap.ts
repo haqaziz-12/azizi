@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+import { products } from "@/lib/products";
+export default function sitemap():MetadataRoute.Sitemap {const base="https://uqaabcarpet.com";return [{url:base,changeFrequency:"weekly",priority:1},{url:`${base}/about`,changeFrequency:"monthly",priority:.7},{url:`${base}/products`,changeFrequency:"weekly",priority:.9},{url:`${base}/craftsmanship`,changeFrequency:"monthly",priority:.7},{url:`${base}/services`,changeFrequency:"monthly",priority:.6},{url:`${base}/faq`,changeFrequency:"monthly",priority:.5},{url:`${base}/contact`,changeFrequency:"yearly",priority:.6},...products.filter(p=>p.status==="published").map(p=>({url:`${base}/products/${p.slug}`,changeFrequency:"monthly" as const,priority:.7}))];}
