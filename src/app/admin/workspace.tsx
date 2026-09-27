@@ -4,7 +4,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase";
 
 type ProductRow={id?:string;slug:string;name:string;collection_type:string;size:string;quality:string;materials:string;washing_type:string;pile_type:string;description:string;price_label:string;front_image:string|null;back_image:string|null;detail_image:string|null;status:"draft"|"published"|"archived";sort_order:number};
 const blank:ProductRow={slug:"",name:"",collection_type:"",size:"Confirm dimensions",quality:"Confirm with Uqaab team",materials:"Confirm composition",washing_type:"Confirm care instructions",pile_type:"Confirm construction",description:"",price_label:"Price on inquiry",front_image:null,back_image:null,detail_image:null,status:"draft",sort_order:0};
-const fields:(keyof ProductRow)[]=["name","slug","collection_type","size","quality","materials","washing_type","pile_type","description","price_label"];
+const fields=["name","slug","collection_type","size","quality","materials","washing_type","pile_type","description","price_label"] as const;
 export default function AdminWorkspace(){
  const supabase=useMemo(()=>createSupabaseBrowserClient(),[]);
  const [session,setSession]=useState<any>(null);const [email,setEmail]=useState("");const [password,setPassword]=useState("");const [rows,setRows]=useState<ProductRow[]>([]);const [draft,setDraft]=useState<ProductRow>(blank);const [status,setStatus]=useState("");const [busy,setBusy]=useState(false);
