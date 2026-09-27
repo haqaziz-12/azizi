@@ -8,7 +8,7 @@ Premium digital home for Uqaab Nawin Afghanistan Ltd., a Kabul-based handmade Af
 - Cloudflare-compatible deployment (see deployment notes)
 
 ## Current status
-This repository contains the initial website foundation, product catalogue seed data, Supabase schema/RLS policies, and admin implementation plan. Product records are illustrative drafts: confirm all specifications, prices, and product imagery before publishing.
+This is the first implementation milestone: responsive public pages, a 15-concept catalogue, Supabase-backed published product reads, authenticated admin product CRUD, three image upload slots per product, contact enquiry submission, database/RLS migration, and SEO foundations. Product records are illustrative drafts: confirm all specifications, prices, and product imagery before publishing. Full editable page/site-settings management, end-to-end production QA, and deployment configuration remain follow-up work.
 
 ## Setup
 1. Install Node.js 20+.
